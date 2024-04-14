@@ -1,20 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import { NativeBaseProvider, Box } from "native-base";
 import { theme } from './src/assets/fontconfig';
+import { Provider } from 'react-redux';
+import { store } from './src/store';
 
 function App(): React.JSX.Element {
 
   return (
-    <NativeBaseProvider theme={theme}>
-      <Box>Hello world</Box>
-    </NativeBaseProvider>
+    <Provider store={store}>
+      <NativeBaseProvider theme={theme}>
+      </NativeBaseProvider>
+    </Provider>
   );
 }
 
