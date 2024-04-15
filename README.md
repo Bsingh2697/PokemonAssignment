@@ -57,13 +57,13 @@ To handle string functions and most importantly debounce the search results
 Used typescript to build this project
 Using Skeletons for good user experience
 
-## Project structure
- scr folder on root level to manage everything inside the project
- assets folder handles the fonts and icons used in the project
- components folder manages all the components used by the screens
- screens folder holds the top level screens of the app. In our case the listing and details screen.
- services folder to handle the RTK queries
- store folder to manage the reducers of the app state
+# Project structure
+ ##scr folder on root level to manage everything inside the project
+ ##assets folder handles the fonts and icons used in the project
+ ##components folder manages all the components used by the screens
+ ##screens folder holds the top level screens of the app. In our case the listing and details screen.
+ ##services folder to handle the RTK queries
+ ##store folder to manage the reducers of the app state
 
 
 
