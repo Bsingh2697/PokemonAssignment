@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { Pokemon, Pokemons } from "./types";
+import { Pokemon, PokemonDetails, Pokemons } from "./types";
 
 
 export const pokemonApi = createApi({
@@ -19,7 +19,7 @@ export const pokemonApi = createApi({
                 return currentArg !== previousArg
               },
         }),
-        getPokemonByName: builder.query<Pokemon, string>({
+        getPokemonByName: builder.query<PokemonDetails, string>({
             query: (name) => `pokemon/${name}`,
           }),
     })
