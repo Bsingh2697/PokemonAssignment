@@ -1,4 +1,3 @@
-import { Dictionary } from "lodash"
 
 export  type Pokemon = {
     name: string,

@@ -1,10 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { Pokemon, PokemonDetails, Pokemons } from "./types";
+import { PokemonDetails, Pokemons } from "./types";
+import config from 'react-native-config';
 
 
 export const pokemonApi = createApi({
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://pokeapi.co/api/v2/',
+        baseUrl: config.BASE_URL
     }),
     endpoints:(builder) => ({
         getAllPokemon: builder.query<Pokemons, number>({
