@@ -1,4 +1,4 @@
 export enum ScreenKeys {
     Pokemons = 'Pokemons',
-    Details= 'Details'
+    Details = 'Details'
 }
