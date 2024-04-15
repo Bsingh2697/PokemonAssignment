@@ -1,6 +1,6 @@
 import { ScreenKeys } from "./ScreenKeys";
 
-export type AuthenticationStackParamList = {
+export type PokemonStackList = {
     [ScreenKeys.Pokemons] : undefined;
-    [ScreenKeys.Details] : undefined;
+    [ScreenKeys.Details] : {name: string};
   };
