@@ -1,5 +1,5 @@
 import { Card, View, Text } from "native-base"
-import { Image, StyleSheet, TouchableOpacity } from "react-native"
+import { StyleSheet, TouchableOpacity } from "react-native"
 import _ from 'lodash';
 
 type Props = {
@@ -8,12 +8,20 @@ type Props = {
     onPress: ()=>void 
 }
 export const PokemonCard = ({url, name, onPress} : Props) => {
+
+    const generateRandomColor = () => {
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+        return `rgb(${red}, ${green}, ${blue})`;
+    };
+
     return (
         <TouchableOpacity onPress={onPress}>
         <Card style={style.cardStyle}>
             <View style={style.cardView}>
                 <View style={style.textView}>
-                <Text fontFamily="primary" fontWeight="600" >{_.capitalize(name)}</Text>
+                <Text color={generateRandomColor()} fontFamily="primary" fontWeight="600" >{_.capitalize(name)}</Text>
                 </View>
             </View>
         </Card>

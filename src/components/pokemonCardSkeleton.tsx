@@ -1,4 +1,5 @@
 import { Center, HStack, Skeleton, VStack } from "native-base"
+import { View } from "react-native"
 
 type Props = {
     showHeader ?: boolean
@@ -6,6 +7,7 @@ type Props = {
 
 export const SkeletonList = ({showHeader} : Props) => {
     return (
+        <View testID="skeleton-list">
         <Center w="100%" marginTop="20">
                 {showHeader ? <HStack alignItems="center" marginBottom="2">
                     <Skeleton size="10" rounded="full" marginRight="4"/>
@@ -22,5 +24,6 @@ export const SkeletonList = ({showHeader} : Props) => {
                     <Skeleton mb="3" w="80" h="20" rounded="8" />
                 </VStack>
         </Center>
+        </View>
     )
 }
